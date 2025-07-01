@@ -10,3 +10,13 @@ def get_num_chars(text):
         else:
             char_count[char] = 1
     return char_count
+
+def sort_on(items):
+    return items["num"]
+
+def sort_dictionary(dic):
+    dic_list = []
+    for k, v in dic.items():
+        dic_list.append({"char": k, "num": v})
+    dic_list.sort(reverse=True, key=sort_on)
+    return dic_list
